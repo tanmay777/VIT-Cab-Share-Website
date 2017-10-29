@@ -13,7 +13,7 @@
   <body >
 
 <div class="container-fluid" style="background: #CBE32D">
-	<h1 style="margin-left: 50px;margin-bottom: 30px;margin-top: 30px;">Book my Cab</h1>
+	<h1 style="margin-left: 50px;margin-bottom: 30px;margin-top: 30px;"><a href="index.php">Book my Cab</a></h1>
 </div>
 
 <div class="container-fluid text-center">
@@ -39,7 +39,7 @@
     				die("Connection failed: " . mysqli_connect_error());
 				}
 
-				$query="SELECT * FROM user_data WHERE name NOT LIKE $customer";
+				$query="SELECT * FROM user_data WHERE cust='$customer'";
 				$select_all_events=mysqli_query($conn,$query);
 				
 				if(empty($select_all_events)){
@@ -59,6 +59,7 @@
 				{
 				
 				while($row=mysqli_fetch_assoc($select_all_events)){
+				$id=$row['ID'];
 				$from=$row['from1'];
 				$to=$row['to1'];
 				$date=$row['date'];
@@ -87,6 +88,7 @@
 							  				<h4> <?php echo $time ?> </h2>
 		  								</div>
 		  								<div class="col-md-2 text-center">
+		  									<a href="cancel.php?id=<?php echo $id; ?>">
 							  				<button class="btn btn-danger">Cancel</button>
 		  								</div>
 

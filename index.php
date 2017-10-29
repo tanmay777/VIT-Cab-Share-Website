@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>VIT CAB SHARE</title>
+    <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="https://use.fontawesome.com/5b1ca6f502.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -40,21 +41,21 @@ if(isset($_SESSION['username']  ) )
   <nav class="navbar navbar-inverse navbar-fixed">
     <div class="container-fluid" >
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">VIT CAB SHARE</a>
+        <a class="navbar-brand" style="font-family: 'Cedarville Cursive', cursive; font-weight: bold;" href="#">VIT CAB SHARE</a>
       </div>
       <ul class="nav navbar-nav" style="margin-left:280px;">
         <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Cars</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact us</a></li>
+        <li><a href="your-taxi/site/index-1.html">About</a></li>
+        <li><a href="your-taxi/site/index-2.html">Cars</a></li>
+        <li><a href="your-taxi/site/index-3.html">Services</a></li>
+        <li><a href="your-taxi/site/index-4.html">Contact us</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="login.html"><?php echo $login ?></a></li>
         <?php
         if(strcmp($login,"Sign In") )
         {
-        	echo '<li><a href="index.php">Logout</li>';
+        	echo '<li><a href="signout.php">Logout</li>';
         }
 
         ?>

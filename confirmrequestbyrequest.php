@@ -20,7 +20,7 @@
  $cust = $_GET['cust'];
  $own = $_GET['own'];
 
-$sql = "insert into user_data values ('$name','$mobile','$email','$no','$from','$to','$date','$time','$operator','$option','$type','$cust')";
+$sql = "insert into user_data(name,mobile,email,no,from1,to1,date,time,operator,option1,type,cust) values ('$name','$mobile','$email','$no','$from','$to','$date','$time','$operator','$option','$type','$cust')";
 
 $sql1 = "delete from request where from1='$cust' and to1='$own' ";
  
@@ -30,11 +30,12 @@ $sql1 = "delete from request where from1='$cust' and to1='$own' ";
 // $page = "index.php";
 //$sec = "3";
 ?>
+
 <html>
     <head>
-    <title>Thank You for successfully sharing the cab</title>
+    <title>Thank You For Booking A Cab</title>
    <!-- <meta http-equiv="refresh" content="3" URL="index.php"> -->
-   	<meta http-equiv="" content="5;url=index.php">
+   	<meta http-equiv="refresh" content="5;url=index.php?username=<?php echo $uname?> ">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
@@ -57,9 +58,12 @@ $sql1 = "delete from request where from1='$cust' and to1='$own' ";
 		
 			</div>
 		</div>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script >
+			setTimeout(function(){ 
+				window.location.href = "index.php";
+			 }, 3000);
+		</script>
+		
 
 	</body>
-
-
-?>
+</html>

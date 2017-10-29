@@ -19,7 +19,7 @@
  $operator = $_POST['operator'];
  $option = $_POST['option'];
  $type= $_POST['type'];
- $sql = "insert into user_data values ('$name','$mobile','$email','$no','$from','$to','$date','$time','$operator','$option','$type','$uname')";
+ $sql = "insert into user_data(name,mobile,email,no,from1,to1,date,time,operator,option1,type,cust) values ('$name','$mobile','$email','$no','$from','$to','$date','$time','$operator','$option','$type','$uname')";
  
  mysqli_query($con, $sql)
 

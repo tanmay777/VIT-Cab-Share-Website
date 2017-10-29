@@ -1,4 +1,5 @@
 <?php
+session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -13,11 +14,12 @@ if (!$conn) {
 
 $from = $_GET['from'];
 $to = $_GET['to'];
+$customer = $_SESSION['username'];
 
-$sql = "INSERT INTO request VALUES ('$from','$to')";
+$sql = "INSERT INTO request(from1,to1) VALUES ('$from','$to')";
 
 if (mysqli_query($conn, $sql)) {
-    echo "Successfully Requested";
+    header("Location: index.php");
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }

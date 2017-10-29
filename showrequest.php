@@ -13,7 +13,7 @@
   <body >
 
 <div class="container-fluid" style="background: #CBE32D">
-	<h1 style="margin-left: 50px;margin-bottom: 30px;margin-top: 30px;">Book my Cab</h1>
+	<h1 style="margin-left: 50px;margin-bottom: 30px;margin-top: 30px;"><a href="index.php">Book my Cab</a></h1>
 </div>
 
 <div class="container-fluid text-center">
@@ -70,7 +70,7 @@
 					$last = $r['last'];
 					$mobile =$r['mobile'];
 					$email = $r['email'];
-				?>		                    
+			?>		                    
 		                    <div class="col-md-12">
 								<div class="panel panel-default" style="background : #DFE2DB">
   									<div class="panel-body">

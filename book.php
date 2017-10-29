@@ -13,7 +13,7 @@
   <body>
   
 	 <div class="container-fluid" style="background: #CBE32D">
-		<h1 style="margin-left: 50px;margin-bottom: 30px;margin-top: 30px;">Book my Cab</h1>
+		<h1 style="margin-left: 50px;margin-bottom: 30px;margin-top: 30px;"><a href="index.php">Book my Cab</a></h1>
 	</div>
 
 	<?php 
