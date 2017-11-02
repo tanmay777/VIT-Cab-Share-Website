@@ -84,7 +84,7 @@
 							  				<br><br>
 		  								</div>
 		  								<div class="col-md-4 text-center" style="margin-top: 75px">
-		  									<a href="request.php?from=<?php echo $customer; ?>&to=<?php echo $uname; ?>"><button class="btn btn-info" style="padding: 25px 50px">Request</button>
+		  									<a href="request.php?from=<?php echo $from;?>&to=<?php echo $to;?>&from_user=<?php echo $customer; ?>&to_user=<?php echo $uname; ?>"><button class="btn btn-info" style="padding: 25px 50px">Request</button>
 		  								</div>
   									</div>
 								</div>	
